@@ -1,0 +1,35 @@
+<html>
+<body>
+
+	<script src="https://p-l-out-dev1-dev-ed--c.na3.visual.force.com/lightning/lightning.out.js"></script>
+
+	Hali maki haver XD
+	<button onclick="buu();" >buu</button>
+
+	<script>
+		var token = '00D50000000bunR!AQQAQF9cTmFi3OfMZ81wPL9QIVcp_FozwT8sfrB1dalkrIqfqPJ5gkqynj_Qk7.4oHQ9_c.DDgpeGOAi4txY_W0vUjVuqHg4';
+
+		$Lightning.use(
+			'c:lout1',
+			function() {
+				$Lightning.createComponent(
+					'c:counter',
+					{},
+					'lDiv',
+					function(cmp) {
+						console.log('it is started.')
+					}
+				);
+			},
+			'https://p-l-out-dev1-dev-ed.lightning.force.com', 
+			token
+		);
+
+	</script>
+
+	<div id="lDiv"></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Hello World!",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions" : ["<all_urls>", "webview"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "sandbox": {
+    "pages" : ["sandboxed.html"]
+  },
+  "icons": { "16": "cat.png", "128": "cat.png" }
+       
+}

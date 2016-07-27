@@ -1,0 +1,59 @@
+<html>
+<body>
+
+
+  	SANDBOX
+
+	<script>
+		//killing the localStorage
+		Object.defineProperty(window, 'localStorage', {value : {}, writeable : true});
+	</script>
+
+	<script src="https://p-l-out-dev1-dev-ed--c.na3.visual.force.com/lightning/lightning.out.js"></script>
+
+
+	<script>
+	
+
+	var messageHandler = function(event) {
+	  console.log('SANDBOX:', event);
+	};
+	window.addEventListener('message', messageHandler);
+
+
+	</script>
+
+
+
+
+	<script>
+		var maki = function() {
+			console.log('makiiiii!');
+		}
+
+		console.log(window.maki);
+		
+		var token = '00D50000000bunR!AQQAQBVeUI7oxW.EvvQ3iCV5.dCX37P2WlylLoDQ4efPfoB5OkBQLbhkK5.hwJqG5u7t.c1DwYHLxOFjENuCE6_.f0enOcWQ';
+
+		$Lightning.use(
+			'c:lout1',
+			function() {
+				$Lightning.createComponent(
+					'c:counter',
+					{},
+					'lDiv',
+					function(cmp) {
+						console.log('it is started.')
+					}
+				);
+			},
+			'https://p-l-out-dev1-dev-ed.lightning.force.com', 
+			token
+		);
+		
+	</script>
+
+	<div id="lDiv"></div>
+
+</body>
+</html>
